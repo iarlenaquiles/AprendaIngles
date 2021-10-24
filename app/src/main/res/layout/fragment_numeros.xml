@@ -1,14 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/fundo_numeros"
     tools:context=".Fragments.NumerosFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <ImageView
+        android:id="@+id/buttonUm"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/um"
+        app:layout_constraintBottom_toTopOf="@+id/buttonTres"
+        app:layout_constraintEnd_toStartOf="@+id/buttonDois"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <ImageView
+        android:id="@+id/buttonDois"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/dois"
+        app:layout_constraintBottom_toTopOf="@+id/buttonQuatro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonUm"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/buttonTres"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/tres"
+        app:layout_constraintBottom_toTopOf="@+id/buttoncinco"
+        app:layout_constraintEnd_toStartOf="@+id/buttonQuatro"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonUm" />
+
+    <ImageView
+        android:id="@+id/buttonQuatro"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/quatro"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSeis"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonTres"
+        app:layout_constraintTop_toBottomOf="@+id/buttonDois" />
+
+    <ImageView
+        android:id="@+id/buttonSeis"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/seis"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttoncinco"
+        app:layout_constraintTop_toBottomOf="@+id/buttonQuatro" />
+
+    <ImageView
+        android:id="@+id/buttoncinco"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/cinco"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonSeis"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonTres" />
+</androidx.constraintlayout.widget.ConstraintLayout>
